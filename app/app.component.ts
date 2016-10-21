@@ -4,19 +4,25 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
   <h1>Track your every meal</h1>
-  <div class="meal" (click)="showMeal()" *ngFor="let meal of meals">
+  <div *ngFor="let meal of meals">
+  <div class="meal">
   <h2>{{ meal.name }}</h2>
   <h2>{{ meal.details }}</h2>
   <h2>{{ meal.calories }} calories</h2>
+  <button (click)="showMeal(meal)">Edit Meal</button>
   </div>
-  <div>
+
+  <div *ngIf="selectedmeal">
   <label>Enter Meal</label>
   <input [(ngModel)]="selectedmeal.name">
   <label>Enter Calories</label>
   <input type="number" [(ngModel)]="selectedmeal.calories">
   <label>Enter Details</label>
   <input [(ngModel)]="selectedmeal.details">
+  <button (click)="hideMeal()">Done</button>
   </div>
+  </div>
+
   `
 })
 
@@ -26,10 +32,12 @@ export class AppComponent {
     new Meal("Salad", "with no dressing", 100),
   ];
 
-  selectedmeal: Meal = this.meals[0];
+  selectedmeal: Meal = null;
   showMeal(clickedMeal: Meal){
     this.selectedmeal = clickedMeal;
-    console.log(this.selectedmeal);
+  }
+  hideMeal(){
+    this.selectedmeal = null;
   }
 }
 
