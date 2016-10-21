@@ -1,28 +1,21 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Meal } from './meal';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'meal-list',
   template: `
-  <div *ngFor="let meal of meals">
+  <div *ngFor="let meal of childMealList">
   <h2>{{ meal.name }}</h2>
-  <button (click)="showMeal(meal)">Edit<button>
+  <button (click)="editClicked(meal)">Edit<button>
   </div>
 
   `
 })
 
 export class MealListComponent {
-    public meals: Meal[] = [
-    new Meal("Burger", "ate half of it", 145),
-    new Meal("Salad", "with no dressing", 100),
-  ];
-
-  selectedmeal: Meal = null;
-  showMeal(clickedMeal: Meal){
-    this.selectedmeal = clickedMeal;
-  }
-  hideMeal(){
-    this.selectedmeal = null;
-  }
+    @Input() childMealList: Meal[];
+    @Output() clickSender = new EventEmitter();
+    editClicked(mealsEdit: Meal) {
+      this.clickSender.emit(mealsEdit);
+    }
 }

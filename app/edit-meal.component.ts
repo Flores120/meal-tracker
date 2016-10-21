@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Meal }  from './meal';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'edit-meal',
@@ -13,10 +13,13 @@ import { Meal }  from './meal';
   <input [(ngModel)]="selectedmeal.details">
   <button (click)="hideMeal()">Done</button>
   </div>
-  </div>
   `
 })
 
 export class EditMealComponent {
-
+ @Input() childSelectedMeal: Meal;
+ @Output() doneClickedSender = new EventEmitter();
+ doneClicked() {
+   this.doneClickedSender.emit();
+ }
 }
