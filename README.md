@@ -1,5 +1,5 @@
 #GitHub Search#
-###A website that lets track your meals###
+###A website that lets you track your meals###
 ###By Alvaro Flores###
 
 ###This site allows you to track every meal you input in, you can also edit your meals and give them a small description and the number of calories you took.###
