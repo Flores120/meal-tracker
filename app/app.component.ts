@@ -12,6 +12,8 @@ import { Component } from '@angular/core';
   <div>
   <label>Enter Meal</label>
   <input [(ngModel)]="selectedmeal.name">
+  <label>Enter Calories</label>
+  <input type="number" [(ngModel)]="selectedmeal.calories">
   <label>Enter Details</label>
   <input [(ngModel)]="selectedmeal.details">
   </div>
