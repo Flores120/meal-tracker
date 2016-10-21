@@ -1,33 +1,34 @@
-##GitHub Search##
+#GitHub Search#
+###A website that lets track your meals###
+###By Alvaro Flores###
 
-site that lets you search for people on github
+###This site allows you to track every meal you input in, you can also edit your meals and give them a small description and the number of calories you took.###
 
-By Alvaro Flores
+##Setup/Installation Requirements##
+###Git clone###
+###NPM install in your terminal###
+###Bower Install###
+###Gulp Build###
+###Gulp Serve###
+###Its Very Simple###
 
-Description
+##Known Bugs##
+###Currently there are no bugs###
 
-This site lets search for people's usersnames and names and it outputs a list of usernames and a small description as well as their repositories_
+##Support and contact details##
+###If there are any bugs please contact me and i will get on it as soon as possible at alvaro.flores01@gmail.com###
 
-Setup/Installation Requirements
+##Technologies Used##
+###HTM###
+###CSS###
+###BootStra###
+###JQuery###
+###Node###
+###JavaScript###
+###Typscript###
+###AngularJS###
 
-Git clone
-Open in it in the browser and you're done
-its a simple
-Known Bugs
+##License##
+###This site is licensed under ISC###
 
-Currently there are no bugs
-
-Support and contact details
-
-If there are any bugs please contact me and i will get on it as soon as possible
-
-Technologies Used
-
-HTM CSS BootStra JQuer Nod JavaScript
-
-License
-
-MIT
-
-Copyright (c) 2016 Alvaro Flores @Epicodus
-Contact GitHub API Training Shop Blog About
+####Copyright (c) 2016 Alvaro Flores @Epicodus####
