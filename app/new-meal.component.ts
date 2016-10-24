@@ -4,7 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-    <div class="newMeal">
+  <div class="newMeal">
     <h2> Enter New Meal</h2>
     <label>Enter Meal</label>
     <input #newName>
@@ -17,8 +17,9 @@ import { Meal } from './meal.model';
       newName.value='';
       newCalories.value='';
       newDetails.value='';
-      ">Add Meal</button>
-    </div>
+      ">Add Meal
+    </button>
+  </div>
   `
 })
 

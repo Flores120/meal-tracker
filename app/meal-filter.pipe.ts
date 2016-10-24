@@ -3,7 +3,6 @@ import {Meal} from './meal.model';
 
 @Pipe({
   name: "mealpipe",
-  // pure: false
 })
 export class MealFilterpipe implements PipeTransform {
   transform(input: Meal[], calorieCount){
