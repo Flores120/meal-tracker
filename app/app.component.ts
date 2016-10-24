@@ -4,8 +4,10 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-app',
   template: `
+
   <div class="container">
   <h1>Track your every meal</h1>
+
   <meal-list
       [childMealList]="masterMealList"
       (clickSender)="showMeal($event)">
@@ -24,9 +26,12 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
+    new Meal("Pizza", "ate 5 slice", 640),
     new Meal("Burger", "only ate half", 342),
     new Meal("Hot Dog", "just the bun", 100),
-    new Meal("Salad", "didnt put any pickes", 455)
+    new Meal("Big Mac", "didnt put any pickes", 533),
+    new Meal("Chipotle", "steak burrito", 600),
+    new Meal("Tuna Sandwitch", "No mayo", 355),
   ];
   selectedmeal: Meal = null;
   showMeal(clickedMeal: Meal) {
