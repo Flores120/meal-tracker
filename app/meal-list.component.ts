@@ -9,11 +9,15 @@ import { Meal } from './meal.model';
     <option value="under500">Under 500 Calories</option>
     <option value="over500">Over 500 Calories</option>
   </select>
+
+<div class= "meal-container">
   <div *ngFor="let meal of childMealList | mealpipe:selectedCalCount">
+  <div class="meals">
     <h2>{{ meal.name }}</h2>
     <h2>{{ meal.calories}}</h2>
     <h4>{{ meal.details}}</h4>
     <button (click)="editClicked(meal)">Edit</button>
+  </div>
   </div>
 
   `

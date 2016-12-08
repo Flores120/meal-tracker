@@ -4,8 +4,10 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-app',
   template: `
-  <div class="container">
+  <div class="header">
     <h1>Track your every meal</h1>
+  </div>
+  <div class="container">
     <meal-list
         [childMealList]="masterMealList"
         (clickSender)="showMeal($event)">
